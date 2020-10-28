@@ -1,0 +1,21 @@
+.sidenav {
+  &__title {
+    font: 400 30px / 27px 'GnuolaneFree', sans-serif;
+    color: $titlecolor;
+    border-bottom: 5px solid #dfdcdc;
+    padding-bottom: 13px;
+    margin-bottom: 10px;
+  }
+  &__link {
+    display: inline-block;
+    font: 400 16px / 25px 'GnuolaneFree', sans-serif;
+    opacity: 0.5;
+    color: $titlecolor;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+  }
+}

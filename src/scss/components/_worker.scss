@@ -1,0 +1,39 @@
+.worker {
+  width: 100%;
+  border: 5px solid #dfdcdc;
+  @media screen and (min-width: 990px) {
+    width: 222px;
+  }
+  &__img-wrapper {
+    padding: 10px 10px 20px 10px;
+  }
+  &__img {
+    max-width: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__text {
+    border-top: 5px solid #dfdcdc;
+    text-align: center;
+    padding: 8px 10px;
+  }
+  &__name {
+    font: 400 20px / 20px 'GnuolaneFree', sans-serif; 
+    text-transform: uppercase;
+    color: $titlecolor;
+    margin-bottom: 2px;
+    @media screen and (min-width: 480px) {
+      font-size: 24px;
+      line-height: 23px;
+    }
+  }
+  &__position {
+    font: 400 13px / 13px 'GnuolaneFree', sans-serif; 
+    color: $titlecolor;
+    margin-bottom: 0;
+    @media screen and (min-width: 480px) {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}

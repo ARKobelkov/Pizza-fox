@@ -1,0 +1,135 @@
+.info {
+  &__wrapper {
+    padding-bottom: 42px;
+  }
+  &__content {
+    padding-bottom: 20px;
+    min-height: 1px;
+    width: 100%;
+    @media screen and (min-width: 990px) {
+      float: left;
+      padding-right: 230px;
+      padding-left: 310px;
+      padding-bottom: 0;
+    }
+  }
+  &__about {
+    padding: 10px 0;
+    text-align: center;
+    @media screen and (min-width: 990px) {
+      padding: 10px 40px 10px 50px;
+      text-align: left;
+    }
+  }
+  &__about-content {
+    margin-bottom: 27px;
+  }
+  &__more-about-link {
+    display: inline-block;
+    font: 400 16px / 27px 'GnuolaneFree', sans-serif;
+    font-family: GnuolaneFree;
+    text-decoration: underline;
+    color: $titlecolor;
+    transition: all 0.3s ease;
+    align-self: start;
+    padding-left: 30px;
+    padding-right: 30px;
+    @media screen and (min-width: 990px) {
+      padding-left: 0;
+    }
+  }
+  &__news {
+    padding: 10px 0 20px 0;
+    min-height: 1px;
+    @media screen and (min-width: 990px) {
+      margin-left: -100%;
+      width: 310px;
+      padding: 10px 0;
+      float: left;
+    }
+  }
+  &__news-title-wrapper {
+    margin-bottom: 30px;
+  }
+  &__news-wrapper {
+    border: 3px solid #dfdcdc;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 990px) {
+      text-align: left;
+    }
+  }
+  &__new {
+    display: flex;
+    @media screen and (min-width: 990px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 480px) {
+      width: 50%;
+    }
+  }
+  &__new-link {
+    display: block;
+    position: relative;
+    border: 3px solid #dfdcdc;
+    text-decoration: none;
+    padding: 29px 30px;
+    transition: all 0.3s ease;
+    &:hover,
+    &:active {
+      border: 3px solid #747474;
+    }
+  }
+  &__new-date {
+    font: 400 30px / 27px 'GnuolaneFree', sans-serif;
+    font-family: GnuolaneFree;
+    color: $titlecolor;
+  }
+  &__new-text {
+    font: 400 14px / 25px 'ArialMT', sans-serif;
+    color: $fontcolor;
+    margin: 0;
+    opacity: 0.9;
+  }
+  &__news-link-wrapper {
+    text-align: center;
+    @media screen and (min-width: 990px) {
+      text-align: left;
+    }
+  }
+  &__news-link {
+    display: inline-block;
+    font: 400 16px / 27px 'GnuolaneFree', sans-serif;
+    font-family: GnuolaneFree;
+    text-decoration: underline;
+    color: $titlecolor;
+    transition: all 0.3s ease;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &__sidebar {
+    margin-top: 10px;
+    min-height: 1px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 990px) {
+      float: left;
+      margin-left: -230px;
+      margin-top: 0;
+      width: 230px;
+    }
+  }
+  &__sidebanner {
+    order: 1;
+    width: 230px;
+    margin-bottom: 40px;
+    @media screen and (min-width: 990px) {
+      order: 0;
+    }
+  }
+  &__sidenav {
+    margin-bottom: 10px;
+  }
+}

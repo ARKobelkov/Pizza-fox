@@ -1,0 +1,52 @@
+.sidebanner {
+  background-color: #ececec;
+  position: relative;
+  overflow: hidden;
+  &__link {
+    display: block;
+    padding: 23px 0 18px 15px;
+    text-decoration: none;
+    &:hover .sidebanner__btn,
+    &:active .sidebanner__btn {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+    }
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+    font: 400 70px / 60px 'GnuolaneFree', sans-serif;
+    text-transform: uppercase;
+    color: $titlecolor;
+    margin: 0;
+  }
+  &__subtitle {
+    position: relative;
+    z-index: 1;
+    font: 400 20px / 22px 'GnuolaneFree', sans-serif;
+    text-transform: uppercase;
+    color: $titlecolor;
+    margin-bottom: 30px;
+  }
+  &__btn {
+    display: inline-block;
+    font: 400 15px / 16px 'GnuolaneFree', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #ffc000;
+    padding: 12px 14px;
+    max-width: 63px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0;
+    transition: all 0.3s ease;
+  }
+  &__img-wrapper {
+    position: absolute;
+    bottom: -36px;
+    right: -78px;
+  }
+  &__img {
+    max-width: none;
+    width: 100%;
+  }
+}

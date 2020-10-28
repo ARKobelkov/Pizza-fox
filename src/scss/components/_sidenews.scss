@@ -1,0 +1,32 @@
+.sidenews {
+  &__link {
+    display: block;
+    text-decoration: none;
+    padding: 30px 25px 20px 25px;
+    border: 3px solid #dfdcdc;
+    transition: all 0.3s ease;
+    &:hover,
+    &:active {
+      border: 3px solid #747474;
+    }
+  }
+  &__img-wrapper {
+    float: left;
+    margin-right: 10px;
+    width: 75px;
+  }
+  &__img {
+    max-width: none;
+    width: 100%;
+  }
+  &__title {
+    font: 400 16px / 18px 'GnuolaneFree', sans-serif;
+    color: $blackcolor;
+    margin-bottom: 7px;
+  }
+  &__text {
+    font: 400 14px / 22px 'ArialMT', sans-serif;
+    color: $secondcolor;
+    margin-bottom: 0;
+  }
+}

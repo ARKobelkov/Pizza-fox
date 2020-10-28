@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  position: relative;
+  margin: 0 -5px;
+  flex-wrap: wrap;
+  &__item {
+    padding: 5px;
+    flex: 0 0 auto;
+  }
+  &__link {
+    text-decoration: none;
+    font: 400 14px / 14px 'ArialMT', sans-serif;
+    color: $titlecolor;
+    background: #dfdcdc;
+    padding: 8px 13px 6px 13px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: block;
+    &:hover,
+    &_active {
+      color: #fff;
+      background: $titlecolor;
+    }
+  }
+}

@@ -1,0 +1,218 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: $background;
+  font: 400 14px / 24px 'ArialMT', sans-serif;
+  color: $fontcolor;
+}
+a {
+  outline: none;
+  font: 400 16px / 27px 'GnuolaneFree', sans-serif;
+  text-decoration: underline;
+  color: $titlecolor;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+p {
+  margin: 0 0 20px;
+  span {
+    font: 400 16px / 27px 'GnuolaneFree', sans-serif;
+    color: $titlecolor;
+  }
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+b,
+strong {
+  font-weight: 700;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'GnuolaneFree', sans-serif;
+  font-weight: 400;
+  color: #212121;
+  line-height: normal;
+  margin: 0 0 20px;
+}
+h1 {
+  font-size: 100px;
+}
+h2 {
+  font-size: 70px;
+}
+h3 {
+  font-size: 30px;
+  line-height: 27px;
+  margin-bottom: 30px;
+}
+h4 {
+  font-size: 27px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 16px;
+}
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+ul.marker li,
+ol.marker li {
+  position: relative;
+  font: 400 16px / 27px 'GnuolaneFree', sans-serif;
+  color: $titlecolor;
+}
+ul.marker li {
+  padding-left: 25px;
+  display: inline-block;
+}
+ul.marker li:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $titlecolor;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+ol.marker li {
+  counter-increment: step-counter;
+}
+ol.marker li:before {
+  content: counter(step-counter) '.';
+  font: 400 16px / 27px 'GnuolaneFree', sans-serif;
+  color: $titlecolor;
+  margin-right: 4px;
+}
+q {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 20px;
+  background: #fbfbfb;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  font-style: italic;
+}
+svg {
+  display: block;
+  overflow: hidden;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $secondcolor;
+  opacity: 1;
+  /* Хром */
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $secondcolor;
+  opacity: 1;
+  /* Файерфокс */
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $secondcolor;
+  opacity: 1;
+  /* Для старых версий файерфокса */
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $secondcolor;
+  opacity: 1;
+  /* едж и эксплорер */
+}
+input::-ms-clear {
+  display: none;
+}
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.cover {
+  padding: 0 15px;
+  position: relative;
+  margin: 0 auto;
+  min-width: 300px;
+  @media screen and (min-width: 480px) {
+    min-width: 320px;
+  }
+  @media screen and (min-width: 600px) {
+    max-width: 570px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 730px;
+  }
+  @media screen and (min-width: 990px) {
+    max-width: 970px;
+  }
+}
+.slick-dots {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    max-width: 75px;
+    justify-content: flex-end;
+  }
+}
+.slick-dots li  {
+  flex: 0 0 auto;
+  padding: 2px;
+}
+.slick-dots li button {
+  display: block;
+  border: none;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 0;
+  width: 14px;
+  height: 14px;
+  opacity: 0.2;
+  background-color: #f8f8f8;
+  transition: all 0.5s ease;
+}
+.slick-dots li.slick-active button {
+  background-color: #ffc000;
+  opacity: 1;
+}
+body.visible-menu {
+  overflow: hidden;
+}
+body.visible-menu .header__nav {
+  left: 0;
+}

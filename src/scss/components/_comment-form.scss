@@ -1,0 +1,48 @@
+.comment-form {
+  &__title {
+    font: 400 30px / 27px 'GnuolaneFree', sans-serif;
+    color: $titlecolor;
+    border-bottom: 5px solid #dfdcdc;
+    padding-bottom: 15px;
+    margin-bottom: 23px;
+  }
+  &__field {
+    margin-bottom: 10px;
+    span {
+      max-width: 230px;
+      display: block;
+      font: 400 14px / 22px 'ArialMT', sans-serif;
+      color: $secondcolor;
+      margin-bottom: 2px;
+    }
+  }
+  &__input,
+  &__textarea {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    padding: 0 15px;
+    height: 35px;
+    max-width: 230px;
+    width: 100%;
+  }
+  &__textarea {
+    max-width: 470px;
+    height: 184px;
+    resize: none;
+    padding: 15px 15px;
+  }
+  &__btn {
+    cursor: pointer;
+    border: none;
+    text-decoration: underline;
+    font: 400 16px / 34px 'GnuolaneFree', sans-serif;
+    color: $titlecolor;
+    transition: all 0.3s ease;
+    background-color: $background;
+    margin-bottom: 10px;
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}

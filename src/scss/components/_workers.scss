@@ -1,0 +1,42 @@
+.workers {
+  min-height: 1px;
+  margin: 0 auto;
+  width: 100%;
+  @media screen and (min-width: 990px) {
+    margin-left: -100%;
+    padding-right: 0;
+    float: left;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    @media screen and (min-width: 990px) {
+      margin: auto;
+    }
+    @media screen and (min-width: 600px) {
+      margin-left: -10px;
+    }
+  }
+  &__worker {
+    display: flex;
+    width: 50%;
+    padding: 0 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    @media screen and (min-width: 990px) {
+      display: block;
+      width: 50%;
+      padding: 0;
+      &:nth-child(even) .worker {
+        float: right;
+      }
+    }
+    @media screen and (min-width: 600px) {
+      padding: 0 10px;
+    }
+    @media screen and (min-width: 480px) {
+      width: calc(100%/3);
+    }
+  }
+}
