@@ -1,0 +1,53 @@
+.offers {
+  &__cover {
+    padding-top: 50px;
+  }
+  &__header {
+    padding: 15px 0 60px 0;
+    position: relative;
+    @media screen and (min-width: 990px) {
+      padding: 15px 110px 25px 25px;
+    }
+    @media screen and (min-width: 480px) {
+      padding: 15px 40px 25px 40px;
+    }
+  }
+  &__title {
+    font: 700 28px / 28px 'Fregat', sans-serif;
+    color: $titlecolor;
+    margin: 0 auto;
+    text-align: center;
+    @media screen and (min-width: 990px) {
+      margin-right: 100px;
+      text-align: left;
+    }
+  }
+  &__link {
+    font: 700 28px / 28px 'Fregat', sans-serif;
+    color: $titlecolor;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    // .slick-list {
+    //   margin-right: -2px;
+    // }
+    .slick-track {
+      display: flex;
+    }
+    .slick-slide {
+      display: flex;
+      height: auto;
+      flex: 0 0 auto;
+      > div {
+        display: flex;
+      }
+    }
+  }
+}

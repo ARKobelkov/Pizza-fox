@@ -1,0 +1,39 @@
+.about-text {
+  &__label {
+    font: 700 16px "Fregat", sans-serif;
+    text-transform: uppercase;
+    color: $aboutlabel;
+    letter-spacing: 0.9px;
+    margin-bottom: 26px;
+  }
+  &__title {
+    font: 700 32px / 40px "Fregat", sans-serif;
+    color: $titlecolor;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+  }
+  &__content {
+    font: 400 15px / 25px 'Source Sans Pro', sans-serif;
+    color: $fontcolor;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+  }
+  &__btn {
+    display: inline-block;
+    background-color: $background;
+    border: 2px solid #f2f2f2;
+    border-radius: 21.5px;
+    text-decoration: none;
+    font: 700  15px / 31px 'Source Sans Pro', sans-serif;
+    color: $linkcolor;
+    padding: 3px 31px;
+    margin: 10px 0;
+    transition: all 0.5s ease;
+    &:hover,
+    &:active {
+      background-color: $linkcolor;
+      border: 2px solid $linkcolor;
+      color: $background;
+    }
+  }
+}

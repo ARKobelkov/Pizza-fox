@@ -1,0 +1,42 @@
+.review {
+  width: 33.33333333333333%;
+  text-align: center;
+  @media screen and (min-width: 600px) {
+    padding: 0 30px;
+    text-align: left;
+  }
+  &__header {
+    margin-bottom: 8px;
+    position: relative;
+    @media screen and (min-width: 768px) {
+      padding-left: 40px;
+    }
+  }
+  &__icon {
+    display: none;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    fill: $greencolor;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+  &__name {
+    font: 700 18px / 30px 'Fregat', sans-serif;
+    color: $titlecolor;
+    letter-spacing: 0.7px;
+    margin-bottom: 0;
+  }
+  &__src {
+    font: 400 16px / 30px 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.7px;
+    color: $reviewsrc;
+    margin-bottom: 0;
+  }
+  &__text {
+    font: 400 15px / 25px 'Source Sans Pro', sans-serif;
+    color: $greycolor;
+    letter-spacing: 0.3px;
+  }
+}

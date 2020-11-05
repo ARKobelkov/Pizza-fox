@@ -1,122 +1,143 @@
 .footer {
-  &__border {
-    border-top: 5px solid #dfdcdc;
-  }
-  &__wrapper {
-    padding-top: 55px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    position: relative;
-    margin: 0 -17px;
-    @media screen and (min-width: 990px) {
-      padding-right: 270px;
-      flex-direction: row;
-    }
-  }
-  &__home {
-    @media screen and (min-width: 990px) {
-      width: 23%;
-    }
-  }
-  &__inspirations {
-    @media screen and (min-width: 990px) {
-      width: 23%;
-    }
-  }
-  &__tips {
-    @media screen and (min-width: 990px) {
-      width: 23%;
-    }
-  }
-  &__advice {
-    @media screen and (min-width: 990px) {
-      width: 23%;
-    }
-  }
-  &__links {
-    width: 100%;
-    padding: 0 17px;
-    margin-top: 10px;
-    @media screen and (min-width: 990px) {
-      width: 270px;
-      position: absolute;
-      right: 0;
-      margin-top: 0;
-    }
-  }
-  &__links-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-  &__privacy-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2px;
-    margin-bottom: 6px;
-    span {
-      display: block;
-      font: 400 16px / 25px 'GnuolaneFree', sans-serif;
-      color: #323232;
-      margin: 0 3px;
-    }
-  }
-  &__architecture,
-  &__policy {
-    display: block;
-    font: 400 16px / 25px 'GnuolaneFree', sans-serif;
-    color: #323232;
-    text-decoration: none;
-    margin: 0 3px;
-    transition: all 0.3s ease;
-  }
-  &__policy {
-    flex: 0 0 auto;
-  }
-  &__policy:hover,
-  &__policy:active {
-    text-decoration: underline;
-  }
-  &__social-list {
-    display: flex;
-    flex-wrap: wrap;
-    
-  }
-  &__social-item {
-    padding: 2px;
-  }
-  &__social-twitter,
-  &__social-facebook,
-  &__social-google {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    border-radius: 2px;
-    width: 36px;
-    height: 36px;
-    text-align: center;
-    &:hover,
-    &:active {
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
-    }
-  }
-  &__social-twitter {
-    background-color: #24b5eb;
-  }
-  &__social-facebook {
-    background-color: #004e76;
-  }
-  &__social-google {
-    background-color: #2a2a2a;
-  }
-  &__icon {
+  border-top: 2px solid #f2f2f2;
+  background: $greybgcolor;
+  position: relative;
+  &:before {
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+    height: 100%;
+    width: 100%;
+    background: url(../../images/pattern.svg) left top repeat;
+  }
+  &__wrapper {
+    position: relative;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    display: flex;
+    margin: 0 -15px;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    @media screen and (min-width: 990px) {
+      justify-content: space-between;
+    }
+    @media screen and (min-width: 600px) {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+  &__info {
+    padding: 0 15px;
+    flex: 0 0 auto;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    @media screen and (min-width: 600px) {
+      margin-top: 0;
+    }
+  }
+  &__img-wrapper {
+    max-width: 74px;
+  }
+  &__logo-text {
+    padding-left: 15px;
+  }
+  &__logo-title {
+    font: 700 20px / 20px 'Fregat', sans-serif;
+    text-transform: uppercase;
+    color: $titlecolor;
+    margin-bottom: 2px;
+    letter-spacing: 0.5px;
+  }
+  &__logo-subtitle {
+    font: 400 15px / 15px 'Source Sans Pro', sans-serif;
+    color: $footerfont;
+    letter-spacing: 0.3px;
+    margin: 0;
+  }
+  &__copyright {
+    font: 400 15px / 18px 'Source Sans Pro', sans-serif;
+    color: $footerfont;
+    margin-bottom: 20px;
+  }
+  &__policy {
+    display: block;
+    font: 400 15px 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    color: $titlecolor;
+    transition: all 0.2s ease;
+    margin-bottom: 18px;
+    &:hover,
+    &:active {
+      color: $linkcolor;
+    }
+  }
+  &__site {
+    font: 400 15px 'Source Sans Pro', sans-serif;
+    color: $footerfont;
+    letter-spacing: 0.3px;
+  }
+  &__site-link {
+    font: 400 15px 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    color: $titlecolor;
+    transition: all 0.3s ease;
+    &:hover,
+    &:active {
+      color: $linkcolor;
+    }
+  }
+  &__contacts {
+    padding: 10px 15px 0 15px;
+    flex: 0 0 auto;
+  }
+  &__contacts-wrapper {
+    margin-bottom: 23px;
+  }
+  &__phone-number {
+    font: 700 21px / 21px 'Fregat', sans-serif;
+    cursor: default;
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    span {
+      color: $titlecolor;
+    }
+  }
+  &__time-work {
+    font-size: 15px;
+    font-weight: 400;
+    color: $greycolor;
+  }
+  &__social-wrapper {
+    margin-bottom: 17px;
+  }
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 -5px;
+    max-width: 196px;
+    justify-content: center;
+    @media screen and (min-width: 600px) {
+      justify-content: flex-start;
+    }
+  }
+  &__social-item {
+    padding: 5px;
+  }
+  &__social-link {
+    display: block;
+    text-decoration: none;
+  }
+  &__address {
+    font: 400  15px / 22px 'Source Sans Pro', sans-serif;
+    color: $greycolor;
   }
 }

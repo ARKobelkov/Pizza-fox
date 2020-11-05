@@ -1,0 +1,150 @@
+.picking {
+  &__cover {
+    padding-top: 50px;
+  }
+  &__wrapper {
+    position: relative;
+    background: $whitecolor;
+    display: flex;
+    padding: 55px 25px 55px 25px;
+    @media screen and (min-width: 1200px) {
+      padding: 55px 25px 55px 147px;
+    }
+    @media screen and (min-width: 990px) {
+      padding: 55px 25px 55px 55px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: url(../../images/pattern.svg) left top repeat;
+      z-index: 1;
+    }
+  }
+  &__img-wrapper {
+    display: none;
+    width: 240px;
+    z-index: 2;
+    flex: 0 0 auto;
+    @media screen and (min-width: 1200px) {
+      width: 304px;
+    }
+    @media screen and (min-width: 990px) {
+      display: flex;
+    }
+  }
+  &__img {
+    max-width: none;
+    width: 100%;
+  }
+  &__content {
+    text-align: center;
+    z-index: 2;
+    padding: 0;
+    margin: 0 auto;
+    @media screen and (min-width: 1200px) {
+      padding: 79px 0 0 100px;
+    }
+    @media screen and (min-width: 990px) {
+      padding: 40px 0 0 100px;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 0 0 0 100px;
+      margin: 0;
+    }
+    @media screen and (min-width: 600px) {
+      text-align: left;
+    }
+  }
+  &__title {
+    font: 700 26px / 31px 'Fregat', sans-serif;
+    color: $titlecolor;
+    margin-bottom: 23px;
+  }
+  &__descr {
+    font: 400 16px / 22px 'Source Sans Pro', sans-serif;
+    color: $greycolor;
+    margin: 0 auto 23px auto;
+    max-width: 440px;
+    @media screen and (min-width: 768px) {
+      margin: 0 0 23px 0;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    transition: all .5s ease;
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+  &__form {
+    margin-bottom: 23px;
+    &-content {
+      display: flex;
+      margin: 0 -10px;
+      position: relative;
+      justify-content: center;
+      flex-wrap: wrap;
+      @media screen and (min-width: 768px) {
+        justify-content: flex-start;
+      }
+      @media screen and (min-width: 600px) {
+        flex-wrap: nowrap;
+      }
+    }
+    &-field {
+      padding: 5px 10px;
+      position: relative;
+    }
+    &-btn-block {
+      padding: 5px 10px;
+    }
+    &-input {
+      display: block;
+      max-width: 211px;
+      height: 50px;
+      background-color: $background;
+      border: 2px solid #ededed;
+      border-radius: 25px;
+      padding: 0 15px 0 50px;
+      font: 400 16px "Source Sans Pro",sans-serif;
+      color: $titlecolor;
+      position: relative;
+      transition: all .3s ease;
+      &:focus {
+        border: 2px solid $yellowcolor;
+      }
+      &::-webkit-input-placeholder,
+      &::-moz-placeholder,
+      &:-ms-input-placeholder {
+        color: $placeholder;
+        opacity: 1;
+      }
+    }
+  }
+  &__phone-icon {
+    position: absolute;
+    top: 24px;
+    left: 33px;
+    fill: $linkcolor;
+  }
+  &__form-submit {
+    height: 50px;
+    background-color:$linkcolor;
+    border-radius: 25px;
+    font: 400 16px "Source Sans Pro",sans-serif;
+    color: #ffffff;
+    border: none;
+    padding: 0 35px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    &:hover,
+    &:active {
+      background-color: $yellowcolor;
+    }
+  }
+}

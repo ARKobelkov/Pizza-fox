@@ -1,0 +1,23 @@
+.advantages {
+  &__cover {
+    padding-top: 50px;
+  }
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 45px;
+    &_grey {
+      background: $greybgcolor;
+    }
+  }
+  &__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../../images/pattern.svg) left top repeat;
+    z-index: 1;
+  }
+}

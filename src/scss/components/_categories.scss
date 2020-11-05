@@ -1,0 +1,9 @@
+.categories {
+  &__cover {
+    padding-top: 50px;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

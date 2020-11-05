@@ -1,0 +1,28 @@
+.about {
+  &__cover {
+    padding-top: 68px;
+    padding-bottom: 80px;
+  }
+  &__wrapper {
+    border-top: 2px solid #f2f2f2;
+    padding-top: 83px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__text-content {
+    width: 100%;
+    padding-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      width: 50%;
+      padding-right: 45px;
+      padding-bottom: 0;
+    }
+  }
+  &__map-content {
+    width: 100%;
+    @media screen and (min-width: 1200px) {
+      width: 50%;
+      padding-left: 45px;
+    }
+  }
+}

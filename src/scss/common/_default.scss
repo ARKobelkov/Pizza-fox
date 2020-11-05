@@ -9,25 +9,19 @@ body {
 }
 body {
   background: $background;
-  font: 400 14px / 24px 'ArialMT', sans-serif;
+  font: 400  18px / 25px 'Source Sans Pro', sans-serif;
   color: $fontcolor;
 }
 a {
+  color: $linkcolor;
   outline: none;
-  font: 400 16px / 27px 'GnuolaneFree', sans-serif;
-  text-decoration: underline;
-  color: $titlecolor;
 }
 a:hover,
 a:active {
   text-decoration: none;
 }
 p {
-  margin: 0 0 20px;
-  span {
-    font: 400 16px / 27px 'GnuolaneFree', sans-serif;
-    color: $titlecolor;
-  }
+  margin: 0 0 10px;
 }
 img {
   display: block;
@@ -43,77 +37,71 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'GnuolaneFree', sans-serif;
-  font-weight: 400;
-  color: #212121;
+  font-family: 'Fregat', sans-serif;
+  font-weight: 700;
+  color: $titlecolor;
   line-height: normal;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
 }
 h1 {
-  font-size: 100px;
+  font-size: 28px;
 }
 h2 {
-  font-size: 70px;
-}
-h3 {
-  font-size: 30px;
-  line-height: 27px;
-  margin-bottom: 30px;
-}
-h4 {
-  font-size: 27px;
-}
-h5 {
   font-size: 24px;
 }
-h6 {
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
   font-size: 16px;
+}
+h6 {
+  font-size: 14px;
 }
 ul,
 ol {
     list-style: none;
     padding: 0;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
 }
 ul.marker li,
 ol.marker li {
-  position: relative;
-  font: 400 16px / 27px 'GnuolaneFree', sans-serif;
-  color: $titlecolor;
-}
-ul.marker li {
   padding-left: 25px;
-  display: inline-block;
+  position: relative;
 }
 ul.marker li:before {
   content: '';
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: $titlecolor;
+  background: $linkcolor;
   display: block;
   position: absolute;
   left: 0;
   top: 10px;
 }
-
 ol.marker li {
   counter-increment: step-counter;
 }
 ol.marker li:before {
   content: counter(step-counter) '.';
-  font: 400 16px / 27px 'GnuolaneFree', sans-serif;
-  color: $titlecolor;
-  margin-right: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 15px;
+  line-height: 25px;
+  color: $linkcolor;
 }
 q {
   display: block;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   padding: 10px 20px;
   background: #fbfbfb;
   border: 1px solid #eee;
   border-radius: 5px;
-  font-style: italic;
 }
 svg {
   display: block;
@@ -127,25 +115,25 @@ button {
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: $secondcolor;
+  color: $inputcolor;
   opacity: 1;
   /* Хром */
 }
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: $secondcolor;
+  color: $inputcolor;
   opacity: 1;
   /* Файерфокс */
 }
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: $secondcolor;
+  color: $inputcolor;
   opacity: 1;
   /* Для старых версий файерфокса */
 }
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: $secondcolor;
+  color: $inputcolor;
   opacity: 1;
   /* едж и эксплорер */
 }
@@ -161,7 +149,6 @@ input::-ms-clear {
   padding: 0 15px;
   position: relative;
   margin: 0 auto;
-  min-width: 300px;
   @media screen and (min-width: 480px) {
     min-width: 320px;
   }
@@ -174,45 +161,100 @@ input::-ms-clear {
   @media screen and (min-width: 990px) {
     max-width: 970px;
   }
+  @media screen and (min-width: 1200px) {
+    max-width: 1170px;
+  }
+  @media screen and (min-width: 1360px) {
+    max-width: 1265px;
+  }
 }
 .slick-dots {
   margin: 0;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  z-index: 2;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    max-width: 75px;
-    justify-content: flex-end;
+  li {
+    flex: 0 0 auto;
+    padding: 5px;
+    button {
+      display: block;
+      border: none;
+      padding: 0;
+      outline: 0;
+      cursor: pointer;
+      font-size: 0;
+      background: $background;
+      border-radius: 50%;
+      height: 8px;
+      width: 8px;
+      transition: all 0.5s ease;
+    }
+  }
+  li.slick-active {
+    button {
+      background-color: $linkcolor;
+    }
   }
 }
-.slick-dots li  {
-  flex: 0 0 auto;
-  padding: 2px;
-}
-.slick-dots li button {
-  display: block;
-  border: none;
-  padding: 0;
-  outline: 0;
-  cursor: pointer;
-  font-size: 0;
-  width: 14px;
-  height: 14px;
-  opacity: 0.2;
-  background-color: #f8f8f8;
-  transition: all 0.5s ease;
-}
-.slick-dots li.slick-active button {
-  background-color: #ffc000;
-  opacity: 1;
-}
-body.visible-menu {
-  overflow: hidden;
-}
-body.visible-menu .header__nav {
-  left: 0;
-}
+.slick-promo-prev,
+  .slick-promo-next {
+    width: 38px;
+    height: 38px;
+    background-color: #f5f5f5;
+    border: 2px solid #e6e6e6;
+    border-radius: 50%;
+    position: absolute;
+    right: 33%;
+    top: auto;
+    cursor: pointer;
+    bottom: 8px;
+    @media screen and (min-width: 990px) {
+      right: 25px;
+      top: 16px;
+    }
+    @media screen and (min-width: 480px) {
+      right: 0;
+      top: 8px;
+      bottom: auto;
+    }
+    &:before {
+      content: '';
+      height: 9px;
+      width: 9px;
+      border-top: 2px solid #626262;
+      border-right: 2px solid #626262;
+      border-radius: 2px;
+      position: absolute;
+      top: 39%;
+      right: 40%;
+      transform: rotate(45deg);
+    }
+  }
+  .slick-promo-prev {
+    left: 33%;
+    @media screen and (min-width: 990px) {
+      left: auto;
+      right: 73px;
+    }
+    @media screen and (min-width: 480px) {
+      left: 0;
+    }
+    &:before {
+      transform: scale(-1, 1);
+      transform: rotate(-135deg);
+      right: 30%;
+    }
+  }
+  .slick-disabled.slick-promo-prev,
+  .slick-disabled.slick-promo-next {
+    &:before {
+      opacity: 0.3;
+    }
+  }
+

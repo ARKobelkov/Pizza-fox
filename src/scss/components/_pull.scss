@@ -1,0 +1,43 @@
+.pull {
+  flex: 0 0 auto;
+  display: flex;
+  @media screen and (min-width: 990px) {
+    display: none;
+  }
+  &__wrapper {
+    display: flex;
+    cursor: pointer;
+    flex: 0 0 auto;
+    align-items: center;
+  }
+  &__icon {
+    width: 20px;
+    height: 16px;
+    flex: 0 0 auto;
+    position: relative;
+    div {
+      height: 2px;
+      width: 100%;
+      background: #000;
+      position: absolute;
+      left: 0;
+      transition: all 200ms ease;
+    }
+    div:nth-child(1) {
+      top: 0;
+    }
+    div:nth-child(2) {
+      top: 7px;
+    }
+    div:nth-child(3) {
+      top: 14px;
+    }
+  }
+  &__text {
+    font: 700 17px "Fregat",sans-serif;
+    color: #000;
+    text-transform: uppercase;
+    display: block;
+    margin-left: 15px;
+  }
+}

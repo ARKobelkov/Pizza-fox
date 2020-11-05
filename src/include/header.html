@@ -1,107 +1,134 @@
-<header class="header">
-    <div class="header__cover cover">
-      <div class="header__container">
-        <div class="header__title-wrapper">
-          <div class="header__subtitle">Most Creative</div>
-          <a href="/" class="header__title-link">
-            <h1 class="header__title"><span>archi</span>tecture</h1>
-          </a>
-          <div class="header__subtitle">Bureau</div>
-        </div>
-        <div class="header__pull-wrapper" id="open-menu">
-          <div class="header__pull">
-            <div class="header__pull-icon">
-              <div></div>
-              <div></div>
-              <div></div>
+<header class="header" id="header">
+  <div class="header__cover cover">
+    <div class="header__info">
+      <div class="header__info-logo-wrapper">
+        <a href="/" class="header__info-logo">
+          <img class="header__info-logo-icon" src="images/logo.svg" alt="Fox">
+        </a>
+      </div>
+      <div class="header__info-left">
+        <div class="header__contacts">
+          <div class="header__contacts-wrapper">
+            <a href="tel:+74964033875" class="header__phone-number">
+              <span>8 (496)</span> 403-38-75
+            </a>
+            <div class="header__time-work">
+              ежедневно с 10:00 до 22:00
             </div>
-            <div class="header__pull-text">menu</div>
+          </div>
+          <div class="header__phone-container">
+            <a href="tel:+74964033875" class="header__phone-btn">
+              <svg class="header__phone-icon" width="15px" height="15px">
+                <use xlink:href="images/icons.svg#phone-icon"></use>
+              </svg>
+            </a>
           </div>
         </div>
-        <nav class="header__nav" id="menu">
-          <div class="header__close-btn" id="close-menu"></div>
-          <ul class="header__nav-list">
-            <li class="header__nav-item header__nav-item_active">
-              <a href="#" class="header__nav-link"><span>01.</span>Home</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link"><span>02.</span>about us</a>
-              <div class="header__submenu-wrapper">
-                <ul class="header__submenu">
-                  <li class="header__submenu-item">
-                    <a href="#" class="header__submenu-link">Our history</a>
-                  </li>
-                  <li class="header__submenu-item">
-                    <a href="#" class="header__submenu-link header__submenu-link_active">Info</a>
-                    <div class="header__sub-submenu-wrapper">
-                      <ul class="header__submenu">
-                        <li class="header__submenu-item">
-                          <a href="#" class="header__submenu-link">our news</a>
-                        </li>
-                        <li class="header__submenu-item">
-                          <a href="#" class="header__submenu-link header__submenu-link_active">capabilities</a>
-                        </li>
-                        <li class="header__submenu-item">
-                          <a href="#" class="header__submenu-link">profile</a>
-                        </li>
-                      </ul>
-                  </li>
-                  <li class="header__submenu-item">
-                    <a href="#" class="header__submenu-link">partners</a>
-                  </li>
-                </ul>
+        <div class="header__address">
+          <div class="header__address-wrapper">
+            <a href="#" class="header__city-wrapper">
+              <svg class="header__geo-icon" width="16px" height="23px">
+                <use xlink:href="images/icons.svg#geo-icon"></use>
+              </svg>
+              <div class="header-city">
+                Егорьевск
               </div>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link"><span>03.</span>Services</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link"><span>04.</span>gallery</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link"><span>05.</span>what’s new</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link"><span>06.</span>contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__slider-wrapper">
-          <div class="header__main-slider" id="main-slider">
-            <div class="header__main-slider-item">
-              <a href="#" class="header__main-slider-link">
-                <img src="images/content/main-slider/house1.jpg" alt="house" class="header__main-slider-img">
-                <div class="header__descr-slider-wrapper">
-                    <h2 class="header__descr-slider-text">We work hard to create <span>success</span> for future generations</h2>
-                </div>
-              </a>
-            </div>
-            <div class="header__main-slider-item">
-              <a href="#" class="header__main-slider-link">
-                <img src="images/content/main-slider/house2.jpg" alt="house" class="header__main-slider-img">
-                <div class="header__descr-slider-wrapper">
-                    <h2 class="header__descr-slider-text"><span>Feel relaxed</span> while we are working for you</h2>
-                </div>
-              </a>
-            </div>
-            <div class="header__main-slider-item">
-              <a href="#" class="header__main-slider-link">
-                <img src="images/content/main-slider/house3.jpg" alt="house" class="header__main-slider-img">
-                <div class="header__descr-slider-wrapper">
-                    <h2 class="header__descr-slider-text">We will <span>personalize</span> a project to suit your needs</h2>
-                </div>
-              </a>
-            </div>
-            <div class="header__main-slider-item">
-              <a href="#" class="header__main-slider-link">
-                <img src="images/content/main-slider/house4.jpg" alt="house" class="header__main-slider-img">
-                <div class="header__descr-slider-wrapper">
-                    <h2 class="header__descr-slider-text">We are <span>ready to design</span> the home of your dream</h2>
-                </div>
-              </a>
+            </a>
+            <div class="header__street">
+              ул. Советская, 176А
             </div>
           </div>
         </div>
       </div>
+      <div class="header__info-right">
+        <div class="header__links">
+          <div class="header__comments">
+            <a href="#" class="header__comments-link">
+              <svg class="header__comments-img" width="16px" height="13px">
+                <use xlink:href="images/icons.svg#comment-icon"></use>
+              </svg>
+              <div class="header__comments-text">
+                Отзывы <span>265</span>
+              </div>
+            </a>
+          </div>
+          <div class="header__delivery">
+            <a href="#" class="header__deliver-link">
+              <svg class="header__deliver-img" width="15px" height="15px">
+                <use xlink:href="images/icons.svg#info-icon"></use>
+              </svg>
+              <div class="header__deliver-text">
+                Доставка и оплата
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="header__orders">
+          <a href="#" class="header__orders-btn">
+            Мои заказы
+          </a>
+        </div>
+        <div class="header__basket">
+          <a href="#" class="header__basket-wrapper">
+            <svg class="header__basket-img">
+              <use xlink:href="images/icons.svg#basket-icon"></use>
+            </svg>
+            <div class="header__basket-price">
+              1 320 р.
+            </div>
+            <div class="header__basket-text">
+              В корзину
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="header__nav">
+    <div class="header__cover cover">
+      <nav class="header__nav-container">
+        <div class="pull">
+          <div class="pull__wrapper">
+            <div class="pull__icon">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="pull__text ">Меню</div>
+          </div>
+        </div>
+        <div class="header__orders header__orders_nav">
+          <a href="#" class="header__orders-btn">
+            Мои заказы
+          </a>
+        </div>
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Меню доставки</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Комплексные обеды</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Фуршеты</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Кейтеринг</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Меню ресторана</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">Акции</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">О нас</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="" class="header__nav-link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>

@@ -1,0 +1,74 @@
+.reviews {
+  &__cover {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    @media screen and (min-width: 768px) {
+      padding-top: 96px;
+      padding-bottom: 100px;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 45px;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      padding-bottom: 65px;
+    }
+  }
+  &__title {
+    text-align: center;
+    font: 700 26px / 30px 'Fregat', sans-serif;
+    color: $titlecolor;
+    padding: 0 15px;
+    margin-bottom: 20px; 
+    @media screen and (min-width: 480px) {
+      text-align: left;
+    }
+  }
+  &__button {
+    padding: 0 15px;
+    margin-bottom: 15px;
+  }
+  &__btn-link {
+    display: block;
+    background-color: $background;
+    border: 2px solid #f2f2f2;
+    border-radius: 21.5px;
+    text-decoration: none;
+    font: 400 15px / 30px 'Source Sans Pro', sans-serif;
+    color: $linkcolor;
+    transition: all 0.5s ease;
+    padding: 5px 22px;
+    transition: all 0.5s ease;
+    &:hover,
+    &:active {
+      background-color: $linkcolor;
+      color: $background;
+      border: 2px solid $linkcolor;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 600px) {
+      margin: 0 -30px;
+    }
+  }
+  .slick-dots {
+    li {
+      button {
+        border: 2px solid $greycolor;
+        height: 10px;
+        width: 10px;
+      }
+    }
+    li.slick-active {
+      button {
+        background: $greycolor;
+      }
+    }
+  }
+}

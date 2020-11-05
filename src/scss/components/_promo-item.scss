@@ -1,0 +1,155 @@
+.promo-item {
+  padding: 23px;
+  border: 2px solid #f2f2f2;
+  width: 25%;
+  position: relative;
+  margin-right: -2px;
+  transition: all 0.2s ease;
+  display: flex!important;
+  flex-direction: column;
+  justify-content: space-between;
+  &:hover,
+  &:active {
+    box-shadow: 0px 1px 14px 0px rgba(34,34,34,0.1);
+  }
+  .slick-slide .promo-item {
+    height: 100%;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img-wrapper {
+    display: block;
+    position: relative;
+  }
+  &__img {
+    max-width: none;
+    width: 100%;
+    max-height: 100%;
+  }
+  &__discount {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    background-color: $yellowcolor;
+    border-radius: 5px 0px 0px 5px;
+    font: 400 18px / 18px 'Pacifico', sans-serif;
+    color: $titlecolor;
+    padding: 5px 5px 8px 8px;
+  }
+  &__text {
+    margin-top: 30px;
+  }
+  &__title {
+    font: 700 20px / 24px 'Fregat', sans-serif;
+    color: $titlecolor;
+    margin-bottom: 16px;
+  }
+  &__link {
+    font: 700 20px / 20px 'Fregat', sans-serif;
+    color: $titlecolor;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    &:hover,
+    &:active {
+      color: $linkcolor;
+    }
+  }
+  &__descr {
+    font: 400 15px / 22px 'Source Sans Pro', sans-serif;
+    color: $greycolor;
+  }
+  &__form {
+    &-content {
+      display: flex;
+      flex-direction: column;
+    }
+    &-container {
+      position: relative;
+      margin: 0 -5px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-top: 7px;
+    }
+    &-field {
+      padding: 5px;
+      input[type=radio] {
+        display: none;
+      }
+    }
+    &-input {
+      display: block;
+      /* Checked */
+      input[type=radio] {
+        &:checked + .promo-item__form-text {
+          background-color: $yellowcolor;
+          color: $blackcolor;
+        }
+      }
+    }
+    &-text {
+      display: block;
+      cursor: pointer;
+      background-color: #f2f2f2;
+      border-radius: 17.5px;
+      padding: 11px 18px;
+      font: 700 14px / 14px 'Fregat', sans-serif;
+      color: $greycolor;
+      user-select: none;
+    }
+  }
+  &__price-block {
+    padding-top: 20px;
+    position: relative;
+    padding-right: 55px;
+  }
+  &__prices {
+    display: flex;
+    align-items: center;
+  }
+  &__price {
+    font: 700 28px / 28px 'Fregat', sans-serif;
+    color: $titlecolor;
+    padding-right: 15px;
+  }
+  &__old-price {
+    font: 400 18px / 18px 'Source Sans Pro', sans-serif;
+    color: $oldprice;
+    text-decoration: line-through;
+  }
+  &__btn-block {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+  }
+  &__form-submit {
+    padding: 0;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    border: none;
+    background: $background;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover,
+    &:active {
+      background: $linkcolor;
+      .promo-item__btn-icon {
+        fill: $background;
+      }
+    }
+  }
+  &__btn-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    fill: $orangecolor;
+  }
+}

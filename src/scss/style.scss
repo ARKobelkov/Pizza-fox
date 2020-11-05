@@ -4,27 +4,26 @@
 @import 'common/default';
 @import 'common/wrapper';
 
-@import 'components/title';
-@import 'components/project';
-@import 'components/sidebanner';
-@import 'components/sidenav';
-@import 'components/footernav';
-@import 'components/worker';
-@import 'components/contacts';
-@import 'components/pagination';
-@import 'components/sidenews';
-@import 'components/content-types';
-@import 'components/comments';
-@import 'components/comment-form';
+@import 'components/pull';
+@import 'components/mobile-nav';
+@import 'components/category';
+@import 'components/advantage';
+@import 'components/footer-nav';
+@import 'components/promo-item';
+@import 'components/offers-item';
+@import 'components/review';
+@import 'components/about-text';
+@import 'components/scroll-menu';
+@import 'components/arrow-up';
 
 @import 'components/header';
-@import 'components/projects';
-@import 'components/info';
+@import 'components/slider';
+@import 'components/categories';
+@import 'components/advantages';
 @import 'components/footer';
-
-@import 'components/company';
-@import 'components/workers';
-@import 'components/services';
-@import 'components/services-list';
-@import 'components/gallery';
-@import 'components/news';
+@import 'components/promo';
+@import 'components/picking';
+@import 'components/offers';
+@import 'components/reviews';
+@import 'components/about';
+@import 'components/map';

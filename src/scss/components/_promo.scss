@@ -1,0 +1,104 @@
+.promo {
+  &__cover {
+    padding-top: 50px;
+  }
+  &__header {
+    padding: 15px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @media screen and (min-width: 990px) {
+      align-items: center;
+      flex-direction: row;
+      padding: 15px 110px 25px 25px;
+    }
+    // @media screen and (min-width: 768px) {
+    //   padding: 15px 110px 25px 25px;
+    // }
+    @media screen and (min-width: 480px) {
+      padding: 15px 40px 25px 40px;
+    }
+  }
+  &__title {
+    margin: 0 auto 30px auto;
+    font: 700 28px / 28px 'Fregat', sans-serif;
+    color: $titlecolor;
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 100px;
+    }
+    @media screen and (min-width: 990px) {
+      margin: 0 60px 10px 0;
+    }
+    @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__link {
+    font: 700 28px / 28px 'Fregat', sans-serif;
+    color: $titlecolor;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+  &__header-tabs {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -17.5px;
+    @media screen and (min-width: 990px) {
+      margin: 0;
+      justify-content: start;
+    }
+    // @media screen and (min-width: 600px) {
+    //   justify-content: start;
+    // }
+  }
+  &__header-tab {
+    padding: 0 6.5px;
+    margin-bottom: 10px;
+    @media screen and (min-width: 480px) {
+      padding: 0 17.5px;
+    }
+  }
+  &__header-link {
+    display: block;
+    padding: 15px 15px 13px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font: 700 15px / 15px 'Fregat', sans-serif;
+    color: $greycolor;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+  }
+  &__header-link.active {
+    background-color: #f2f2f2;
+    color: $titlecolor;
+  }
+  &__tab {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    .slick-track {
+      display: flex;
+      transition: all 0.5s ease;
+      margin: 0;
+    }
+    .slick-list {
+      width: 100%;
+    }
+    .slick-slide {
+      display: flex!important;
+      height: auto;
+      flex: 0 0 auto;
+      > div {
+        display: flex;
+      }
+    }
+  }
+}

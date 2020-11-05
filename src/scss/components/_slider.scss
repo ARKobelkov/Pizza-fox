@@ -1,0 +1,54 @@
+.slider {
+  position: relative;
+  z-index: 1;
+  &__item {
+    display: block!important;
+  }
+  &__item-link {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  &__img {
+    margin: 0 auto;
+    max-width: none;
+    width: 100%;
+    max-height: 464px;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 0;
+    outline: none;
+    width: 20px;
+    height: 34px;
+    padding: 0;
+    background: none;
+    display: block;
+    margin-top: -17px;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    &__icon {
+      width: 20px;
+      height: 34px;
+      fill: $background;
+    }
+  }
+  .slick-prev {
+    left: 40px;
+    transform: scale(-1, 1);
+  }
+  .slick-next {
+    right: 40px;
+  }
+  .slick-dots {
+    bottom: 0;
+    @media screen and (min-width: 768px) {
+      bottom: 15px;
+    }
+    @media screen and (min-width: 600px) {
+      bottom: 8px;
+    }
+  }
+}

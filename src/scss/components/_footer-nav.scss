@@ -1,0 +1,36 @@
+.footer-nav {
+  display: none;
+  padding: 16px 15px 0 15px;
+  flex: 0 0 auto;
+  @media screen and (min-width: 990px) {
+    display: block;
+  }
+  &__title {
+    font: 700 16px 'Fregat', sans-serif;
+    text-transform: uppercase;
+    color: $titlecolor;
+    margin-bottom: 15px;
+  }
+  &__item {
+    font: 400 15px / 30px 'Source Sans Pro', sans-serif;
+    color: $footernavfont;
+    &-link {
+      font: 400 15px / 30px 'Source Sans Pro', sans-serif;
+      color: $footernavfont;
+      text-decoration: none;
+      transition: all .3s ease;
+      &:hover,
+      &:active {
+        color: $linkcolor;
+      }
+      &_underline {
+        text-decoration: underline;
+        color: $titlecolor;
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

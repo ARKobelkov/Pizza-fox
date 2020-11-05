@@ -1,0 +1,66 @@
+.offers-item {
+  display: flex!important;
+  // padding: 10px;
+  // border: 2px solid #f2f2f2;
+  width: 33.33333333333333%;
+  position: relative;
+  // margin-right: -2px;
+  // transition: all 0.2s ease;
+  // &:hover,
+  // &:active {
+  //   box-shadow: 0px 1px 14px 0px rgba(34,34,34,0.1);
+  // }
+  &__wrapper {
+    padding: 10px;
+    flex: 1 1 auto;
+    border: 2px solid #f2f2f2;
+    transition: all 0.2s ease;
+    margin-right: -2px;
+    &:hover,
+    &:active {
+      box-shadow: 0px 1px 14px 0px rgba(34,34,34,0.1);
+    }
+  }
+  &__img-wrapper {
+    display: block;
+    position: relative;
+  }
+  &__img {
+    max-width: none;
+    width: 100%;
+    max-height: 100%;
+  }
+  &__discount {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    background-color: $yellowcolor;
+    border-radius: 0px 7px 7px 0px;
+    font: 400 22px / 23px 'Pacifico', sans-serif;
+    color: $titlecolor;
+    padding: 8px 10px 10px 13px;
+  }
+  &__text {
+    margin-top: 30px;
+    padding: 0 30px 15px 30px;
+  }
+  &__title {
+    font: 700 20px / 24px 'Fregat', sans-serif;
+    color: $titlecolor;
+    margin-bottom: 16px;
+  }
+  &__link {
+    font: 700 20px / 20px 'Fregat', sans-serif;
+    color: $titlecolor;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    &:hover,
+    &:active {
+      color: $linkcolor;
+    }
+  }
+  &__descr {
+    font: 400 15px / 22px 'Source Sans Pro', sans-serif;
+    color: $greycolor;
+  }
+}
