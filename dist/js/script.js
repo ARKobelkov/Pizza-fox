@@ -1,5 +1,7 @@
 "use strict";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 $(function () {
   /* Поддержка svg спрайтов в IE 11 */
   svg4everybody();
@@ -79,7 +81,9 @@ $(function () {
   });
 
   function carouselInit(thisObjects) {
-    thisObjects.slick({
+    var _thisObjects$slick;
+
+    thisObjects.slick((_thisObjects$slick = {
       slidesToShow: 4,
       slidesToScroll: 1,
       infinite: false,
@@ -89,24 +93,34 @@ $(function () {
       nextArrow: '<button type="button" class="slick-next slick-promo-next"></svg></button>',
       dots: false,
       // centerPadding: '0px',
-      swipe: true,
-      responsive: [{
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3
-        }
-      }, {
-        breakpoint: 990,
-        settings: {
-          slidesToShow: 2
-        }
-      }, {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1
-        }
-      }]
-    });
+      swipe: true
+    }, _defineProperty(_thisObjects$slick, "dots", false), _defineProperty(_thisObjects$slick, "appendDots", '#sh-arrows'), _defineProperty(_thisObjects$slick, "responsive", [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 990,
+      settings: {
+        slidesToShow: 2,
+        dots: true,
+        arrows: false
+      }
+    }, {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        dots: true,
+        arrows: false
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        dots: true,
+        arrows: false
+      }
+    }]), _thisObjects$slick));
   }
   /* Слайдер акций */
 
@@ -122,15 +136,20 @@ $(function () {
     prevArrow: '<button type="button" class="slick-prev slick-promo-prev"></svg></button>',
     nextArrow: '<button type="button" class="slick-next slick-promo-next"></svg></button>',
     dots: false,
+    appendDots: '#offers__header',
     responsive: [{
       breakpoint: 990,
       settings: {
-        slidesToShow: 2
+        slidesToShow: 2,
+        arrows: false,
+        dots: true
       }
     }, {
       breakpoint: 600,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 1,
+        arrows: false,
+        dots: true
       }
     }]
   });

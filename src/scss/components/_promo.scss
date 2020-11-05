@@ -12,9 +12,6 @@
       flex-direction: row;
       padding: 15px 110px 25px 25px;
     }
-    // @media screen and (min-width: 768px) {
-    //   padding: 15px 110px 25px 25px;
-    // }
     @media screen and (min-width: 480px) {
       padding: 15px 40px 25px 40px;
     }
@@ -53,9 +50,6 @@
       margin: 0;
       justify-content: start;
     }
-    // @media screen and (min-width: 600px) {
-    //   justify-content: start;
-    // }
   }
   &__header-tab {
     padding: 0 6.5px;
@@ -88,6 +82,10 @@
       display: flex;
       transition: all 0.5s ease;
       margin: 0;
+      &:before,
+      &:after {
+        display: none;
+      }
     }
     .slick-list {
       width: 100%;
@@ -96,9 +94,19 @@
       display: flex!important;
       height: auto;
       flex: 0 0 auto;
+      float: none;
+      min-height: 0;
       > div {
         display: flex;
       }
+    }
+  }
+  .slick-dots {
+    bottom: 8px;
+    li button {
+      height: 9px;
+      width: 9px;
+      border: 1px solid $linkcolor;
     }
   }
 }

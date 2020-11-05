@@ -3,13 +3,13 @@
     padding-top: 50px;
   }
   &__header {
-    padding: 15px 0 60px 0;
+    padding: 15px 0 40px 0;
     position: relative;
     @media screen and (min-width: 990px) {
       padding: 15px 110px 25px 25px;
     }
     @media screen and (min-width: 480px) {
-      padding: 15px 40px 25px 40px;
+      padding: 15px 40px 40px 40px;
     }
   }
   &__title {
@@ -35,19 +35,34 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
-    // .slick-list {
-    //   margin-right: -2px;
-    // }
+    .slick-list {
+      margin: 0 -2px;
+      padding: 0 2px;
+    }
     .slick-track {
       display: flex;
+      &:before,
+      &:after {
+        display: none;
+      }
     }
     .slick-slide {
       display: flex;
       height: auto;
       flex: 0 0 auto;
+      float: none;
+      min-height: 0;
       > div {
         display: flex;
       }
+    }
+  }
+  .slick-dots {
+    bottom: 8px;
+    li button {
+      height: 9px;
+      width: 9px;
+      border: 1px solid $linkcolor;
     }
   }
 }

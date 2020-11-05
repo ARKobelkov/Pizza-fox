@@ -2,6 +2,10 @@
   display: none;
   padding: 16px 15px 0 15px;
   flex: 0 0 auto;
+  width: 17%;
+  @media screen and (min-width: 1200px) {
+    width: 18%;
+  }
   @media screen and (min-width: 990px) {
     display: block;
   }
@@ -15,7 +19,8 @@
     font: 400 15px / 30px 'Source Sans Pro', sans-serif;
     color: $footernavfont;
     &-link {
-      font: 400 15px / 30px 'Source Sans Pro', sans-serif;
+      display: inline-block;
+      font: 400 15px / 20px 'Source Sans Pro', sans-serif;
       color: $footernavfont;
       text-decoration: none;
       transition: all .3s ease;

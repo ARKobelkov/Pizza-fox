@@ -33,6 +33,12 @@
   &__info {
     padding: 0 15px;
     flex: 0 0 auto;
+    @media screen and (min-width: 990px) {
+      width: 28%;
+    }
+    @media screen and (min-width: 600px) {
+      max-width: 50%;
+    }
   }
   &__logo {
     display: flex;
@@ -97,6 +103,15 @@
   &__contacts {
     padding: 10px 15px 0 15px;
     flex: 0 0 auto;
+    @media screen and (min-width: 1200px) {
+      width: 19%;
+    }
+    @media screen and (min-width: 990px) {
+      width: 23%;
+    }
+    @media screen and (min-width: 600px) {
+      max-width: 50%;
+    }
   }
   &__contacts-wrapper {
     margin-bottom: 23px;

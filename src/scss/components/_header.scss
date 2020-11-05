@@ -91,6 +91,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        max-width: 130px;
       }
     }
     &-logo {
@@ -134,6 +135,12 @@
     display: none;
     flex: 0 0 auto;
     margin-left: 29px;
+    @media screen and (min-width: 990px) {
+      display: flex;
+    }
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
     @media screen and (min-width: 600px) {
       display: flex;
     }

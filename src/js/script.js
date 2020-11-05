@@ -91,6 +91,8 @@ $(function () {
       dots: false,
       // centerPadding: '0px',
       swipe: true,
+      dots: false,
+      appendDots: '#sh-arrows',
       responsive: [
         {
           breakpoint: 1200,
@@ -101,13 +103,25 @@ $(function () {
         {
           breakpoint: 990,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 2,
+            dots: true,
+            arrows: false
           }
         },
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 1
+            slidesToShow: 1,
+            dots: true,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            dots: true,
+            arrows: false
           }
         }
       ]
@@ -126,17 +140,22 @@ $(function () {
     prevArrow: '<button type="button" class="slick-prev slick-promo-prev"></svg></button>',
     nextArrow: '<button type="button" class="slick-next slick-promo-next"></svg></button>',
     dots: false,
+    appendDots: '#offers__header',
     responsive: [
       {
         breakpoint: 990,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 2,
+          arrows: false,
+          dots: true
         }
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          arrows: false,
+          dots: true
         }
       }
     ]
