@@ -260,6 +260,87 @@ $(function () {
         player.lookAt([55.3741108840936, 39.04812668650818]);
       }
     });
+  }); // Попап
+
+  $('.modal').on('click', function (event) {
+    event.preventDefault();
+    var iDModal = $(this).attr('data-src');
+    $.fancybox.open({
+      src: iDModal,
+      type: 'inline',
+      opts: {
+        closeExisting: true,
+        gutter: 0,
+        keyboard: true,
+        arrows: false,
+        infobar: false,
+        smallBtn: false,
+        modal: false,
+        touch: false,
+        animationEffect: 'fade',
+        animationDuration: 300,
+        transitionEffect: 'fade',
+        transitionDuration: 300,
+        hideScrollbar: true,
+        hash: false,
+        autoFocus: false,
+        baseTpl: '<div class="fancybox-container" role="dialog" tabindex="-1">' + '<div class="fancybox-bg"></div>' + '<div class="fancybox-inner">' + '<div class="fancybox-stage"></div>' + '</div>' + '</div>',
+        beforeShow: function beforeShow() {
+          // Слайдер 1
+          $('#popup-top-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 4000,
+            arrows: false,
+            dots: false,
+            fade: true,
+            asNavFor: '#popup-bottom-slider'
+          });
+        },
+        afterShow: function afterShow() {
+          // Слайдер 2
+          $('#popup-bottom-slider').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 4000,
+            arrows: false,
+            dots: false,
+            asNavFor: '#popup-top-slider',
+            focusOnSelect: true
+          });
+        },
+        afterClose: function afterClose() {
+          $('#popup-top-slider').slick('unslick');
+          $('#popup-bottom-slider').slick('unslick');
+        }
+      }
+    });
+  }); // Счетчик в заказе
+
+  $('.popup__count-btn').on('click', function () {
+    var $input = $('.popup__count-input');
+
+    if ($(this).hasClass('popup__count-btn_plus')) {
+      $input.val(parseInt($input.val()) + 1);
+      $input.change();
+
+      if ($input.val() >= 1) {
+        $('.popup__count-btn_minus').removeClass('disable');
+      }
+    } else if ($(this).hasClass('popup__count-btn_minus')) {
+      if (parseInt($input.val()) > 1) {
+        $input.val(parseInt($input.val()) - 1);
+        $input.change();
+
+        if ($input.val() == 1) {
+          $(this).addClass('disable');
+        }
+      } else {
+        $(this).addClass('disable');
+      }
+    }
   });
 });
 //# sourceMappingURL=script.js.map

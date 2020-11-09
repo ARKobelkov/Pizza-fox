@@ -38,6 +38,7 @@
     "gulp-useref": "^4.0.1"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.9"
