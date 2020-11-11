@@ -20,14 +20,27 @@
   &__link.active {
     color: $titlecolor;
   }
+  &__content {
+    position: relative;
+  }
   &__container {
+    position: absolute!important;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    display: block!important;
+    visibility: visible!important;
     height: 402px;
     width: 100%;
     position: relative;
-    .ymaps-2-1-77-panorama-control__inception {
-      top: auto;
-      bottom: 5px;
-    }
+    transition: all 0.3s ease;
+  }
+  &__container.active {
+    opacity: 1;
+    position: relative!important;
+  }
+  &__container[data-map-photo] {
+    height: auto;
   }
   &__photo {
     max-width: none;
@@ -37,7 +50,7 @@
   &__btn-full-screen {
     width: 45px;
     height: 45px;
-    background: #fff url(../../images/fullscreen.svg) center center no-repeat;
+    background: #fff url(../images/fullscreen.svg) center center no-repeat;
     box-shadow: 0px 0px 14px 0px rgba(15,48,103,0.03);
     border-radius: 5px;
     position: absolute;

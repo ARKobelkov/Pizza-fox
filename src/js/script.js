@@ -190,12 +190,13 @@ $(function () {
   // Табы между картой и фото
   $('#map-tabs').easytabs({
     updateHash: false,
-    animate: true,
+    animate: false,
+    panelContext: $('.map__content')
   });
   // Табы между картой и панорамой
   $('#map-ya').easytabs({
     updateHash: false,
-    animate: true,
+    animate: false,
   });
 
 
@@ -274,7 +275,8 @@ $(function () {
       function (panoramas) {
         if (panoramas.length > 0) {
             var player = new ymaps.panorama.Player('panorama-block', panoramas[0], {
-              controls: []
+              controls: [],
+              suppressMapOpenBlock: true
             });
             player.lookAt([55.3741108840936, 39.04812668650818]);
         }
