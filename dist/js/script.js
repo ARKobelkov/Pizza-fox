@@ -1,7 +1,5 @@
 "use strict";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 $(function () {
   /* Поддержка svg спрайтов в IE 11 */
   svg4everybody();
@@ -70,8 +68,8 @@ $(function () {
     // tabs: '.tabs__nav > li',
     panelContext: $('.promo__content')
   }).bind('easytabs:before', function (event, $clicked, $targetPanel, settings) {
-    if ($('.promo__content .slick-slider').length) {
-      $('.promo__content .slick-slider').slick('unslick');
+    if ($('.promo__content .owl-loaded').length) {
+      $('.promo__content .owl-loaded').trigger('destroy.owl.carousel');
     }
   }).bind('easytabs:after', function (event, $clicked, $targetPanel, settings) {
     carouselInit($('#' + $targetPanel[0].id));
@@ -81,77 +79,63 @@ $(function () {
   });
 
   function carouselInit(thisObjects) {
-    var _thisObjects$slick;
+    thisObjects.owlCarousel({
+      items: 1,
+      nav: false,
+      slideBy: 1,
+      autoplay: false,
+      loop: false,
+      dots: true,
+      margin: -2,
+      responsive: {
+        600: {
+          items: 2,
+          nav: false
+        },
+        990: {
+          nav: true,
+          navContainer: '#owl-nav',
+          items: 3,
+          dots: false
+        },
+        1200: {
+          nav: true,
+          navContainer: '#owl-nav',
+          items: 4,
+          dots: false
+        }
+      }
+    }); // Проверка для nav owl на скрытие
 
-    thisObjects.slick((_thisObjects$slick = {
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      infinite: false,
-      arrows: true,
-      appendArrows: '#sh-arrows',
-      prevArrow: '<button type="button" class="slick-prev slick-promo-prev"></svg></button>',
-      nextArrow: '<button type="button" class="slick-next slick-promo-next"></svg></button>',
-      dots: false,
-      // centerPadding: '0px',
-      swipe: true
-    }, _defineProperty(_thisObjects$slick, "dots", false), _defineProperty(_thisObjects$slick, "appendDots", '#sh-arrows'), _defineProperty(_thisObjects$slick, "responsive", [{
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 3
-      }
-    }, {
-      breakpoint: 990,
-      settings: {
-        slidesToShow: 2,
-        dots: true,
-        arrows: false
-      }
-    }, {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        dots: true,
-        arrows: false
-      }
-    }, {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        dots: true,
-        arrows: false
-      }
-    }]), _thisObjects$slick));
+    if ($('#owl-nav').hasClass('disabled')) {
+      $('#owl-nav').addClass('hidden');
+    } else {
+      $('#owl-nav').removeClass('hidden');
+    }
   }
   /* Слайдер акций */
 
 
-  $('#offers__content').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
+  $('#offers__content').owlCarousel({
+    items: 1,
+    navContainer: '',
+    nav: false,
+    slideBy: 1,
     autoplay: false,
-    infinite: false,
-    autoplaySpeed: 4000,
-    arrows: true,
-    appendArrows: '#offers__header',
-    prevArrow: '<button type="button" class="slick-prev slick-promo-prev"></svg></button>',
-    nextArrow: '<button type="button" class="slick-next slick-promo-next"></svg></button>',
-    dots: false,
-    appendDots: '#offers__header',
-    responsive: [{
-      breakpoint: 990,
-      settings: {
-        slidesToShow: 2,
-        arrows: false,
-        dots: true
+    loop: false,
+    dots: true,
+    margin: -2,
+    responsive: {
+      600: {
+        items: 2
+      },
+      990: {
+        items: 3,
+        dots: false,
+        nav: true,
+        navContainer: '#offers__header'
       }
-    }, {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        arrows: false,
-        dots: true
-      }
-    }]
+    }
   });
   /* Слайдер отзывы */
 

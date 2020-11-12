@@ -32,37 +32,11 @@
       text-decoration: underline;
     }
   }
+  &__block {
+    overflow: hidden;
+    padding: 1px;
+  }
   &__content {
     display: flex;
-    flex-wrap: wrap;
-    .slick-list {
-      margin: 0 -2px;
-      padding: 0 2px;
-    }
-    .slick-track {
-      display: flex;
-      &:before,
-      &:after {
-        display: none;
-      }
-    }
-    .slick-slide {
-      display: flex;
-      height: auto;
-      flex: 0 0 auto;
-      float: none;
-      min-height: 0;
-      > div {
-        display: flex;
-      }
-    }
-  }
-  .slick-dots {
-    bottom: 8px;
-    li button {
-      height: 9px;
-      width: 9px;
-      border: 1px solid $linkcolor;
-    }
   }
 }

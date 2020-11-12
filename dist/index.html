@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -176,7 +177,7 @@
               </a>
             </div>
           </div>
-        </section
+        </section>
         <!-- End (slider) -->
         <!-- (categories) -->
         <section class="categories">
@@ -353,16 +354,20 @@
               </h2>
               <ul class="promo__header-tabs">
                 <li class="promo__header-tab">
-                  <a href="#promo-sales-hits" class="promo__header-link" id="1">Хиты продаж</a></li>
+                  <a href="#promo-sales-hits" class="promo__header-link" id="1">Хиты продаж</a>
+                </li>
                 <li class="promo__header-tab">
-                  <a href="#promo-sales" class="promo__header-link" id="2">Cо скидкой</a></li>
+                  <a href="#promo-sales" class="promo__header-link" id="2">Cо скидкой</a>
+                </li>
                 <li class="promo__header-tab">
-                  <a href="#promo-sales-new" class="promo__header-link" id="3">Новинки</a></li>
+                  <a href="#promo-sales-new" class="promo__header-link" id="3">Новинки</a>
+                </li>
               </ul>
+              <div class="promo__header-arrows" id="owl-nav"></div>
             </div>
             <div class="promo__content">
               <!-- (promo-tab) -->
-              <div class="promo__tab" id="promo-sales-hits">
+              <div class="promo__tab owl-carousel" id="promo-sales-hits">
                 <!-- (promo-item) -->
                 <div class="promo-item">
                   <div class="promo-item__wrapper">
@@ -564,7 +569,7 @@
               </div>
               <!-- End (promo-tab) -->
               <!-- (promo-tab) -->
-              <div class="promo__tab" id="promo-sales">
+              <div class="promo__tab owl-carousel" id="promo-sales">
                 <!-- (promo-item) -->
                 <div class="promo-item">
                   <div class="promo-item__wrapper">
@@ -825,7 +830,7 @@
               </div>
               <!-- End (promo-tab) -->
               <!-- (promo-tab) -->
-              <div class="promo__tab" id="promo-sales-new">
+              <div class="promo__tab owl-carousel" id="promo-sales-new">
                 <!-- (promo-item) -->
                 <div class="promo-item">
                   <div class="promo-item__wrapper">
@@ -1027,82 +1032,85 @@
                 <a href="#" class="offers__link">Акции и спецпредложения</a>
               </h2>
             </div>
-            <div class="offers__content" id="offers__content">
-              <!-- (offers-item)-->
-              <div class="offers-item">
-                <div class="offers-item__wrapper">
-                  <a href="#" class="offers-item__img-wrapper">
-                    <img src="images/content/offer-salat-ny.jpg" alt="salat-ny" class="offers-item__img">
-                  </a>
-                  <div class="offers-item__text">
-                    <h4 class="offers-item__title">
-                      <a href="#" class="offers-item__link">С новым комбо!</a>
-                    </h4>
-                    <p class="offers-item__descr">Межледниковье, если рассматривать процессы в рамках частно-правовой теории, монотонно вызывает обязательственный драматизм. Большинство...</p>
+            <div class="offers__block">
+              <div class="offers__content owl-carousel" id="offers__content">
+                <!-- (offers-item)-->
+                <div class="offers-item">
+                  <div class="offers-item__wrapper">
+                    <a href="#" class="offers-item__img-wrapper">
+                      <img src="images/content/offer-salat-ny.jpg" alt="salat-ny" class="offers-item__img">
+                    </a>
+                    <div class="offers-item__text">
+                      <h4 class="offers-item__title">
+                        <a href="#" class="offers-item__link">С новым комбо!</a>
+                      </h4>
+                      <p class="offers-item__descr">Межледниковье, если рассматривать процессы в рамках частно-правовой теории, монотонно вызывает обязательственный драматизм. Большинство...</p>
+                    </div>
                   </div>
                 </div>
-            </div>
-            <!-- End (offers-item)-->
-            <!-- (offers-item)-->
-            <div class="offers-item">
-              <div class="offers-item__wrapper">
-                <a href="#" class="offers-item__img-wrapper">
-                  <img src="images/content/offer-tee.jpg" alt="tee" class="offers-item__img">
-                  <div class="offers-item__discount">-20%</div>
-                </a>
-                <div class="offers-item__text">
-                  <h4 class="offers-item__title">
-                    <a href="#" class="offers-item__link">Новогодний корпоратив</a>
-                  </h4>
-                  <p class="offers-item__descr">Новый год не за горами! Пора отметить праздник в офисе или собрать друзей дома! Три средние пиццы Двойная Пепперони, Грибы и ветчина и Сырный цыплёнок...</p>
+                <!-- End (offers-item)-->
+                <!-- (offers-item)-->
+                <div class="offers-item">
+                  <div class="offers-item__wrapper">
+                    <a href="#" class="offers-item__img-wrapper">
+                      <img src="images/content/offer-tee.jpg" alt="tee" class="offers-item__img">
+                      <div class="offers-item__discount">-20%</div>
+                    </a>
+                    <div class="offers-item__text">
+                      <h4 class="offers-item__title">
+                        <a href="#" class="offers-item__link">Новогодний корпоратив</a>
+                      </h4>
+                      <p class="offers-item__descr">Новый год не за горами! Пора отметить праздник в офисе или собрать друзей дома! Три средние пиццы Двойная Пепперони, Грибы и ветчина и Сырный цыплёнок...</p>
+                    </div>
+                  </div>
                 </div>
+                <!-- End (offers-item)-->
+                <div class="offers-item">
+                  <div class="offers-item__wrapper">
+                    <a href="#" class="offers-item__img-wrapper">
+                      <img src="images/content/offer-free-salat.jpg" alt="free-salat" class="offers-item__img">
+                      <div class="offers-item__discount">Салат в подарок</div>
+                    </a>
+                    <div class="offers-item__text">
+                      <h4 class="offers-item__title">
+                        <a href="#" class="offers-item__link">Салат в подарок</a>
+                      </h4>
+                      <p class="offers-item__descr">Акцепт, по определению, формирует штраф, учитывая недостаточную теоретическую           проработанность этой отрасли права.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- End (offers-item)-->
+                <div class="offers-item">
+                  <div class="offers-item__wrapper">
+                    <a href="#" class="offers-item__img-wrapper">
+                      <img src="images/content/offer-tee.jpg" alt="tee" class="offers-item__img">
+                      <div class="offers-item__discount">выгодно!</div>
+                    </a>
+                    <div class="offers-item__text">
+                      <h4 class="offers-item__title">
+                        <a href="#" class="offers-item__link">Комплексные обеды в Егорьевске</a>
+                      </h4>
+                      <p class="offers-item__descr">Свежие, горячие, вкусные обеды – это бизнес-ланч в Пицце-Лисице! Приходите в будние дни в Пиццерию во Дворце спорта, чтобы сытно перекусить.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- End (offers-item)-->
+                <div class="offers-item">
+                  <div class="offers-item__wrapper">
+                    <a href="#" class="offers-item__img-wrapper">
+                      <img src="images/content/offer-pizza.jpg" alt="pizza" class="offers-item__img">
+                    </a>
+                    <div class="offers-item__text">
+                      <h4 class="offers-item__title">
+                        <a href="#" class="offers-item__link">Скидка постоянным клиентам</a>
+                      </h4>
+                      <p class="offers-item__descr">Мы рады представить обновленный сайт «Пиццерии во Дворце спорта» и новую дисконтную программу! Теперь для участия в ней вам нужен только номер телефона – постоянным клиентам доступна скидка 10% на ...</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- End (offers-item)-->
               </div>
             </div>
-            <!-- End (offers-item)-->
-            <div class="offers-item">
-              <div class="offers-item__wrapper">
-                <a href="#" class="offers-item__img-wrapper">
-                  <img src="images/content/offer-free-salat.jpg" alt="free-salat" class="offers-item__img">
-                  <div class="offers-item__discount">Салат в подарок</div>
-                </a>
-                <div class="offers-item__text">
-                  <h4 class="offers-item__title">
-                    <a href="#" class="offers-item__link">Салат в подарок</a>
-                  </h4>
-                  <p class="offers-item__descr">Акцепт, по определению, формирует штраф, учитывая недостаточную теоретическую           проработанность этой отрасли права.</p>
-                </div>
-              </div>
-            </div>
-            <!-- End (offers-item)-->
-            <div class="offers-item">
-              <div class="offers-item__wrapper">
-                <a href="#" class="offers-item__img-wrapper">
-                  <img src="images/content/offer-tee.jpg" alt="tee" class="offers-item__img">
-                  <div class="offers-item__discount">выгодно!</div>
-                </a>
-                <div class="offers-item__text">
-                  <h4 class="offers-item__title">
-                    <a href="#" class="offers-item__link">Комплексные обеды в Егорьевске</a>
-                  </h4>
-                  <p class="offers-item__descr">Свежие, горячие, вкусные обеды – это бизнес-ланч в Пицце-Лисице! Приходите в будние дни в Пиццерию во Дворце спорта, чтобы сытно перекусить.</p>
-                </div>
-              </div>
-            </div>
-            <!-- End (offers-item)-->
-            <div class="offers-item">
-              <div class="offers-item__wrapper">
-                <a href="#" class="offers-item__img-wrapper">
-                  <img src="images/content/offer-pizza.jpg" alt="pizza" class="offers-item__img">
-                </a>
-                <div class="offers-item__text">
-                  <h4 class="offers-item__title">
-                    <a href="#" class="offers-item__link">Скидка постоянным клиентам</a>
-                  </h4>
-                  <p class="offers-item__descr">Мы рады представить обновленный сайт «Пиццерии во Дворце спорта» и новую дисконтную программу! Теперь для участия в ней вам нужен только номер телефона – постоянным клиентам доступна скидка 10% на ...</p>
-                </div>
-              </div>
-            </div>
-            <!-- End (offers-item)-->
           </div>
         </section>
         <!-- End (offers)-->
@@ -1442,19 +1450,23 @@
                     <li class="footer__social-item">
                       <a href="#" class="footer__social-link">
                         <img src="images/vk-icon.svg" alt="vkontakte" class="footer__social-icon">
-                      </a></li>
+                      </a>
+                    </li>
                     <li class="footer__social-item">
                       <a href="#" class="footer__social-link">
                         <img src="images/instagram-icon.svg" alt="vkontakte" class="footer__social-icon">
-                      </a></li>
+                      </a>
+                    </li>
                     <li class="footer__social-item">
                       <a href="#" class="footer__social-link">
                         <img src="images/odnoklassniki-icon.svg" alt="vkontakte" class="footer__social-icon">
-                      </a></li>
+                      </a>
+                    </li>
                     <li class="footer__social-item">
                       <a href="#" class="footer__social-link">
                         <img src="images/facebook-icon.svg" alt="vkontakte" class="footer__social-icon">
-                      </a></li>
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <div class="footer__address-wrapper">
@@ -1487,7 +1499,8 @@
                 </div>
                 <div class="mobile-nav__text">Пицца</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__img-block">
@@ -1495,7 +1508,8 @@
                 </div>
                 <div class="mobile-nav__text">Первые блюда</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__img-block">
@@ -1503,7 +1517,8 @@
                 </div>
                 <div class="mobile-nav__text">Вторые блюда</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__img-block">
@@ -1511,7 +1526,8 @@
                 </div>
                 <div class="mobile-nav__text">Паста</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__img-block">
@@ -1519,7 +1535,8 @@
                 </div>
                 <div class="mobile-nav__text">Салаты</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__img-block">
@@ -1527,7 +1544,8 @@
                 </div>
                 <div class="mobile-nav__text">Закуски</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__img-block">
@@ -1535,7 +1553,8 @@
                 </div>
                 <div class="mobile-nav__text">Гарниры</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__img-block">
@@ -1543,7 +1562,8 @@
                 </div>
                 <div class="mobile-nav__text">Десерты</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__img-block">
@@ -1551,7 +1571,8 @@
                 </div>
                 <div class="mobile-nav__text">Блинное меню</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__img-block mobile-nav__img-block_slender">
@@ -1559,7 +1580,8 @@
                 </div>
                 <div class="mobile-nav__text">Напитки</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
           </ul>
           <div class="mobile-nav__header">
             <h3 class="mobile-nav__title">Ресторан</h3>
@@ -1569,27 +1591,32 @@
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__text">Меню доставки</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__text">Меню ресторана</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__text">Акции</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__text">Комплексные обеды</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__text">О пиццерии</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
           </ul>
           <div class="mobile-nav__header">
             <h3 class="mobile-nav__title">Информация</h3>
@@ -1599,12 +1626,14 @@
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__text">Контакты</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
             <li class="mobile-nav__item">
               <a href="#" class="mobile-nav__link">
                 <div class="mobile-nav__text">Доставка и оплата</div>
                 <div class="mobile-nav__arrow"></div>
-              </a></li>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -1629,12 +1658,24 @@
             <img src="images/footer-fox-logo.svg" alt="Лисица" class="scroll-menu__img">
           </div>
           <ul class="scroll-menu__list">
-            <li class="scroll-menu__item"><a href="#" class="scroll-menu__link">Меню доставки</a></li>
-            <li class="scroll-menu__item"><a href="#" class="scroll-menu__link">Комплексные обеды</a></li>
-            <li class="scroll-menu__item"><a href="#" class="scroll-menu__link">Фуршеты</a></li>
-            <li class="scroll-menu__item"><a href="#" class="scroll-menu__link">Кейтеринг</a></li>
-            <li class="scroll-menu__item"><a href="#" class="scroll-menu__link">Меню ресторана</a></li>
-            <li class="scroll-menu__item"><a href="#" class="scroll-menu__link">Акции</a></li>
+            <li class="scroll-menu__item">
+              <a href="#" class="scroll-menu__link">Меню доставки</a>
+            </li>
+            <li class="scroll-menu__item">
+              <a href="#" class="scroll-menu__link">Комплексные обеды</a>
+            </li>
+            <li class="scroll-menu__item">
+              <a href="#" class="scroll-menu__link">Фуршеты</a>
+            </li>
+            <li class="scroll-menu__item">
+              <a href="#" class="scroll-menu__link">Кейтеринг</a>
+            </li>
+            <li class="scroll-menu__item">
+              <a href="#" class="scroll-menu__link">Меню ресторана</a>
+            </li>
+            <li class="scroll-menu__item">
+              <a href="#" class="scroll-menu__link">Акции</a>
+            </li>
           </ul>
           <div class="scroll-menu__bascket">
             <span>3 130 p.</span>
@@ -1738,6 +1779,7 @@
     <script src="js/svg4everybody.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/plugins/jquery.easytabs.js"></script>
+    <script src="js/owl.carousel.js"></script>
     <script src="js/jquery.fancybox.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=b8636f71-6292-4daf-ab16-98720e450cba&lang=ru_RU"></script>
     <script src="js/script.js"></script>

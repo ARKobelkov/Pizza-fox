@@ -66,8 +66,8 @@ $(function () {
 		panelContext: $('.promo__content'),
 	})
   .bind('easytabs:before', function(event, $clicked, $targetPanel, settings) {
-    if ($('.promo__content .slick-slider').length) {
-    	$('.promo__content .slick-slider').slick('unslick');
+    if ($('.promo__content .owl-loaded').length) {
+    	$('.promo__content .owl-loaded').trigger('destroy.owl.carousel')
     }
   })
   .bind('easytabs:after', function(event, $clicked, $targetPanel, settings) {
@@ -79,86 +79,63 @@ $(function () {
   });
   
   function carouselInit(thisObjects) {
-		
-		thisObjects.slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      infinite: false,
-      arrows: true,
-      appendArrows: '#sh-arrows',
-      prevArrow: '<button type="button" class="slick-prev slick-promo-prev"></svg></button>',
-      nextArrow: '<button type="button" class="slick-next slick-promo-next"></svg></button>',
-      dots: false,
-      // centerPadding: '0px',
-      swipe: true,
-      dots: false,
-      appendDots: '#sh-arrows',
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 3
-          }
+
+    thisObjects.owlCarousel({
+      items: 1,
+      nav: false,
+      slideBy: 1,
+      autoplay: false,
+      loop: false,
+      dots: true,
+      margin: -2,
+      responsive: {
+        600:{
+          items: 2,
+          nav: false,
         },
-        {
-          breakpoint: 990,
-          settings: {
-            slidesToShow: 2,
-            dots: true,
-            arrows: false
-          }
+        990:{
+          nav: true,
+          navContainer: '#owl-nav',
+          items: 3,
+          dots: false,
         },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            dots: true,
-            arrows: false
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            dots: true,
-            arrows: false
-          }
+        1200:{
+          nav: true,
+          navContainer: '#owl-nav',
+          items: 4,
+          dots: false,
         }
-      ]
+      }
     });
+    // Проверка для nav owl на скрытие
+    if ($('#owl-nav').hasClass('disabled')) {
+      $('#owl-nav').addClass('hidden')
+    } else {
+      $('#owl-nav').removeClass('hidden')
+    }
   }
 
    /* Слайдер акций */
-   $('#offers__content').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
+  $('#offers__content').owlCarousel({
+    items: 1,
+    navContainer: '',
+    nav: false,
+    slideBy: 1,
     autoplay: false,
-    infinite: false,
-    autoplaySpeed: 4000,
-    arrows: true,
-    appendArrows: '#offers__header',
-    prevArrow: '<button type="button" class="slick-prev slick-promo-prev"></svg></button>',
-    nextArrow: '<button type="button" class="slick-next slick-promo-next"></svg></button>',
-    dots: false,
-    appendDots: '#offers__header',
-    responsive: [
-      {
-        breakpoint: 990,
-        settings: {
-          slidesToShow: 2,
-          arrows: false,
-          dots: true
-        }
+    loop: false,
+    dots: true,
+    margin: -2,
+    responsive: {
+      600:{
+        items: 2
       },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-          dots: true
-        }
+      990:{
+        items: 3,
+        dots: false,
+        nav: true,
+        navContainer: '#offers__header',
       }
-    ]
+    }
   });
 
   /* Слайдер отзывы */
