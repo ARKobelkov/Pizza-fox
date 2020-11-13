@@ -32,9 +32,11 @@
       text-decoration: underline;
     }
   }
+  &__header-arrows.disabled {
+    display: none;
+  }
   &__block {
     overflow: hidden;
-    padding: 1px;
   }
   &__content {
     display: flex;

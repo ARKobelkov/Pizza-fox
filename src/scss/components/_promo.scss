@@ -73,8 +73,12 @@
     background-color: #f2f2f2;
     color: $titlecolor;
   }
+  &__header-arrows.disabled {
+    display: none;
+  }
   &__content {
     overflow: hidden;
+    margin-right: -1px;
   }
   &__tab {
     display: flex;

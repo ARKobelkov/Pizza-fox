@@ -107,12 +107,6 @@ $(function () {
         }
       }
     });
-    // Проверка для nav owl на скрытие
-    if ($('#owl-nav').hasClass('disabled')) {
-      $('#owl-nav').addClass('hidden')
-    } else {
-      $('#owl-nav').removeClass('hidden')
-    }
   }
 
    /* Слайдер акций */
@@ -133,7 +127,7 @@ $(function () {
         items: 3,
         dots: false,
         nav: true,
-        navContainer: '#offers__header',
+        navContainer: '#offers-nav',
       }
     }
   });
@@ -328,27 +322,53 @@ $(function () {
     });
   });
 
-  // Счетчик в заказе
-  $('.popup__count-btn').on('click', function () {
-    
-    const $input = $('.popup__count-input');
+  /* Изменение поля количества */
+  $('[data-count]').bind('input', function() {
+    let currentField = $(this);
 
-    if ($(this).hasClass('popup__count-btn_plus')) {
-      $input.val(parseInt($input.val()) + 1)
-      $input.change()
-      if ($input.val() >= 1) {
-        $('.popup__count-btn_minus').removeClass('disable')
+    if (currentField.val().match(/[^0-9]/g)) {
+      currentField.val(currentField.val().replace(/[^0-9]/g, ''));
+    }
+
+    if (currentField.val() > parseInt(currentField.attr('max'))) {
+      currentField.val(currentField.attr('max'));
+    }
+  });
+
+  $('[data-count]').bind('blur', function() {
+    let currentField = $(this);
+
+    if (!parseInt(currentField.val())) {
+      currentField.val(currentField.attr('min'));
+    }
+  });
+
+  $('[data-button]').on('click', function() {
+    const currentButton = $(this);
+    const btnsContainer = $(this).parent();
+    const parentContainer = btnsContainer.parent();
+    const currentField = parentContainer.find('[data-count]');
+    const fieldMin = parseInt(currentField.attr('min'));
+    const fieldMax = parseInt(currentField.attr('max'));
+    let fieldValue = parseInt(currentField.val());
+
+    if (currentField.length) {
+
+      if (currentButton.attr('data-button') === 'minus' && fieldValue > fieldMin) {
+        fieldValue--;
+      } else if (currentButton.attr('data-button') === 'plus' && fieldValue < fieldMax) {
+        fieldValue++;
+      } else if (!fieldValue) {
+        fieldValue = fieldMin;
       }
-    } else if ($(this).hasClass('popup__count-btn_minus')) {
-      if (parseInt($input.val()) > 1) {
-        $input.val(parseInt($input.val()) - 1)
-        $input.change()
-        if ($input.val() == 1) {
-          $(this).addClass('disable')
-        }
-      } else {
-          $(this).addClass('disable')
-        }
+
+      currentField.val(fieldValue);
+    }
+
+    if (fieldValue != fieldMin) {
+      $('.popup__count-btn_minus').removeClass('disable');
+    } else {
+      $('.popup__count-btn_minus').addClass('disable');
     }
   });
 });

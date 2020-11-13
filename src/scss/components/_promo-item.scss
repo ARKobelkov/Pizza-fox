@@ -28,6 +28,10 @@
     margin: -1px;
     .owl-item & {
       margin: 0;
+      &:hover,
+      &:active {
+      box-shadow: none;
+    }
     }
     &:hover,
     &:active {

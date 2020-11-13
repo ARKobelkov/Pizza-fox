@@ -1031,6 +1031,7 @@
               <h2 class="offers__title">
                 <a href="#" class="offers__link">Акции и спецпредложения</a>
               </h2>
+              <div class="offers__header-arrows" id="offers-nav"></div>
             </div>
             <div class="offers__block">
               <div class="offers__content owl-carousel" id="offers__content">
@@ -1757,10 +1758,10 @@
               <div class="popup__btns">
                 <div class="popup__count-block">
                   <div class="popup__count-field">
-                    <input type="number" name="popup-count" class="popup__count-input" value="1">
+                    <input type="text" name="popup-count" class="popup__count-input" value="1" data-count max="999" min="1">
                     <div class="popup__count-btns">
-                      <div class="popup__count-btn popup__count-btn_plus"></div>
-                      <div class="popup__count-btn popup__count-btn_minus disable"></div>
+                      <div class="popup__count-btn popup__count-btn_plus" data-button="plus"></div>
+                      <div class="popup__count-btn popup__count-btn_minus disable" data-button="minus"></div>
                     </div>
                   </div>
                 </div>
